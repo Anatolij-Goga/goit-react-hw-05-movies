@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
   margin-bottom: 16px;
   text-transform: uppercase;
 `;
+
 export const SearchForm = styled.form`
   display: flex;
   align-items: center;
@@ -31,14 +32,20 @@ export const SearchFormButton = styled.button`
   width: 100px;
   height: 38px;
   border: 0;
+  color: white;
+  padding: 8px 16px;
+  background-color: #2196f3;
   background-size: 40%;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.6;
+  opacity: 0.8;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   outline: none;
+  font-weight: 500;
   font-size: 20px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   &:hover {
     opacity: 1;
   }

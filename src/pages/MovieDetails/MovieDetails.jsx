@@ -60,12 +60,12 @@ const MovieDetails = () => {
           <Text>Additional information</Text>
           <Item>
             <InfoLink to="cast" state={{ ...location.state }}>
-              cast
+              Cast
             </InfoLink>
           </Item>
           <Item>
             <InfoLink to="reviews" state={{ ...location.state }}>
-              reviews
+              Reviews
             </InfoLink>
           </Item>
         </AddInfo>

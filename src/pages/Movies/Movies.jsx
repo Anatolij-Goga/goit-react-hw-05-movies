@@ -35,7 +35,6 @@ const Movies = () => {
   const handelSubmit = query => {
     const nextParams = query !== '' ? { query } : {};
     setSearchParams(nextParams);
-    console.log(nextParams);
     // setMovies([]);
   };
 

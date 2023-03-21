@@ -1,7 +1,7 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import { Suspense } from 'react';
 import PropTypes from 'prop-types';
-import { MovieLink, List, Item } from './MoviesList.styled';
+import { MovieLink, MovieList, MovieItem } from './MoviesList.styled';
 import { Loader } from 'components/Loader/Loader';
 
 export const MoviesList = ({ movies }) => {
@@ -9,17 +9,17 @@ export const MoviesList = ({ movies }) => {
 
   return (
     <div>
-      <List>
+      <MovieList>
         {movies.map(({ id, title }) => {
           return (
-            <Item key={id}>
+            <MovieItem key={id}>
               <MovieLink to={`/movies/${id}`} state={{ from: location }}>
                 {title}
               </MovieLink>
-            </Item>
+            </MovieItem>
           );
         })}
-      </List>
+      </MovieList>
       <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>

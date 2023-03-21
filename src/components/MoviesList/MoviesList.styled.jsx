@@ -7,17 +7,20 @@ export const MovieLink = styled(Link)`
   padding: 2px 8px;
   &:hover {
     border-radius: 5px;
-    box-shadow: 1px 2px 4px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
   }
 `;
-export const List = styled.ul`
+
+export const MovieList = styled.ul`
   padding: 20px 0 20px;
   margin: 0;
   display: flex;
   flex-direction: column;
   row-gap: 10px;
-  list-style-type: square;
+  list-style: disc;
 `;
-export const Item = styled.li`
+
+export const MovieItem = styled.li`
   font-size: 20px;
 `;
