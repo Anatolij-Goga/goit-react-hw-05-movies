@@ -4,18 +4,18 @@ import { fetchMovieReviews } from 'services/moviesApi';
 import { Author, Text } from './Reviews.styled';
 
 const Reviews = () => {
-  const [movieReviews, setMovieReview] = useState([]);
+  const [movieReviews, setMovieReviews] = useState([]);
   const { movieId } = useParams();
 
   useEffect(() => {
     fetchMovieReviews(movieId).then(responseMovieReviews => {
-      setMovieReview(responseMovieReviews.results);
+      setMovieReviews(responseMovieReviews.results);
     });
   }, [movieId]);
 
   return (
     <>
-      {movieReviews > 0 ? (
+      {movieReviews.length > 0 ? (
         movieReviews.map(({ id, author, content }) => {
           return (
             <ul key={id}>
